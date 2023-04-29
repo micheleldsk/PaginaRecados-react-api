@@ -3,7 +3,7 @@ import cors from "cors";
 import { userRouter, authRouter, messageRouter } from "./routes";
 
 const app = express()
-const port = 8081
+const port = process.env.PORT || 8081 
 
 app.use(cors())
 app.use(express.json())
