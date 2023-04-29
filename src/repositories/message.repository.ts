@@ -38,6 +38,18 @@ class MessageRepository {
         return message
     }
 
+    searchByTitle(userId:string, filterText: string) {
+        const filteredMessages = this.messages.filter((message) => message.title.includes(filterText) && message.userId === userId)
+
+        return filteredMessages
+    }
+
+    searchByStatus(userId:string, active: boolean) {
+        const filteredMessages = this.messages.filter((message) => message.active === active && message.userId === userId)
+
+        return filteredMessages
+    }
+    
     deleteMessage(id: string) {
         const messageIndex = this.messages.findIndex((msg) => msg.id === id);
 

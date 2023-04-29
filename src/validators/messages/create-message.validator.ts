@@ -1,6 +1,5 @@
 import { Request, Response, NextFunction } from "express";
 import { IDefaultResponse } from "../../shared/interfaces";
-import { CreateUserService } from "../../services/users";
 
 export const createMessageValidator = (req: Request, res: Response, next: NextFunction) => {
   const { title, description, userId } = req.body
