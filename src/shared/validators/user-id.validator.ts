@@ -3,7 +3,13 @@ import { IDefaultResponse } from "../../shared/interfaces";
 import { userRepository } from "../../repositories";
 
 export const userIdValidator = (req: Request, res: Response, next: NextFunction) => {
-  const { userId } = req.body
+  let userId: string;
+
+  if (req.body.userId) {
+    userId = req.body.userId
+  } else {
+    userId = req.params.userId
+  }
 
   const userIdIsRegistered = userRepository.checkUserId(userId)
 

@@ -1,2 +1,5 @@
 export * from './create-message.service'
+export * from './get-user-messages.service'
+export * from './update-message.service'
+export * from './toggle-active-status.service'
 export * from './delete-message.service'

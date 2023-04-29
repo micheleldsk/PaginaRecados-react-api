@@ -1,7 +1,8 @@
 import {Request, Response} from 'express'
-import { CreateMessageService, DeleteMessageService } from '../services/messages';
+import { CreateMessageService, DeleteMessageService, ToggleActiveStatusService } from '../services/messages';
 import { IDefaultResponse } from '../shared/interfaces';
 import { GetUserMessagesService } from '../services/messages/get-user-messages.service';
+import { UpdateMessagesService } from '../services/messages/update-message.service';
 
 export class MessagesController {
     addMessage(req: Request, res: Response) {
@@ -18,32 +19,62 @@ export class MessagesController {
         } as IDefaultResponse)
       }
 
-      deleteMessage(req: Request, res: Response) {
-        const { messageId } = req.params;
-  
-        const deleteMessageService = new DeleteMessageService();
+      
+      getUserMessages(req: Request, res: Response) {
+        const { userId } = req.params;
         
-        deleteMessageService.execute(messageId);
+        const getUserMessagesService = new GetUserMessagesService();
+        
+        const userMessages = getUserMessagesService.execute(userId)
+        
+        return res.status(200).json({
+          success: true,
+          data: userMessages
+        } as IDefaultResponse)
+      }
+
+      updateMessage(req: Request, res: Response) {
+        const { messageId } = req.params;
+        const { title, description } = req.body
+
+        const updateMessagesService = new UpdateMessagesService();
+
+        const updatedMessage = updateMessagesService.execute(messageId, title, description);
 
         return res.status(200).json({
           success: true,
-          message: 'Mensagem deletada com sucesso!',
+          message: 'Mensagem atualizada com sucesso!',
+          data: updatedMessage
         } as IDefaultResponse)
-    }
+      }
 
-      getUserMessages(req: Request, res: Response) {
-          const { userId } = req.params;
+      toggleActiveStatus(req: Request, res: Response) {
+          const { messageId } = req.params;
 
-          const getUserMessagesService = new GetUserMessagesService();
+          const toggleActiveStatusService = new ToggleActiveStatusService();
 
-          const userMessages = getUserMessagesService.execute(userId)
+          const updatedMessage = toggleActiveStatusService.execute(messageId);
 
           return res.status(200).json({
             success: true,
-            data: userMessages
+            message: 'Status atualizado!',
+            data: updatedMessage
           } as IDefaultResponse)
       }
-}
+
+      deleteMessage(req: Request, res: Response) {
+          const { messageId } = req.params;
+    
+          const deleteMessageService = new DeleteMessageService();
+          
+          deleteMessageService.execute(messageId);
+  
+          return res.status(200).json({
+            success: true,
+            message: 'Mensagem deletada com sucesso!',
+          } as IDefaultResponse)
+      }
+    }
     
 
     

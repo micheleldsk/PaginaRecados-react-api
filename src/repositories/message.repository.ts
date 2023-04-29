@@ -15,6 +15,29 @@ class MessageRepository {
         return userMessages
     }
 
+    updateMessage(id: string, title?: string, description?: string) {
+        const message = this.messages.find((msg) => msg.id === id);
+
+            if(title) {
+                message!.title = title
+            }
+
+            if(description) {
+                message!.description = description
+            }
+        
+
+        return message
+    }
+
+    toggleActiveStatus(id: string) {
+        const message = this.messages.find((msg) => msg.id === id);
+
+        message!.active = !message!.active
+
+        return message
+    }
+
     deleteMessage(id: string) {
         const messageIndex = this.messages.findIndex((msg) => msg.id === id);
 
