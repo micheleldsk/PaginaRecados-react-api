@@ -12,23 +12,16 @@ Entrega: <br>
 - Repositório no Github para o front-end; </h4>
 <h5> Por Michele Ladanivski, Maio/2023 </h5>
 
-![loginReact](https://user-images.githubusercontent.com/102632136/231018604-dfe76ed5-f591-434c-8db3-02f49a05ef96.jpg)
-<br>
-![loginCreateReact](https://user-images.githubusercontent.com/102632136/231018595-34937a56-1241-413b-a0fe-29bbe3e62b94.jpg)
-<br>
-![recadosReact001](https://user-images.githubusercontent.com/102632136/231018605-4a2ae1e8-d7f2-44f9-b465-9831d6067d3a.jpg)
-<br>
-![recadosReact002](https://user-images.githubusercontent.com/102632136/231018606-583097e9-0c50-4b1f-808a-381f61f74ac7.jpg)
-<br>
-![recadosReact003](https://user-images.githubusercontent.com/102632136/231018607-e43f8af0-e0e0-4f91-ba47-fffe6802fc6f.jpg)
-<br>
-![recadosReact004](https://user-images.githubusercontent.com/102632136/231018610-9b037025-effc-4314-8d8b-9202ee03f991.jpg)
-<br>
-![recadosReact005](https://user-images.githubusercontent.com/102632136/231018613-ac07dde2-6dfc-450b-8004-ee5f170f81cb.jpg)
-<br>
+![00](https://user-images.githubusercontent.com/102632136/235779595-636edd4c-fe94-456b-b1ba-92ed925f9557.jpg) <br>
+![01controlers](https://user-images.githubusercontent.com/102632136/235779601-d94ca75c-ad8a-4c16-ae70-9bfd2cdd0f4c.jpg)
+![02models](https://user-images.githubusercontent.com/102632136/235779604-6ac87969-89eb-4fb7-985a-1f9ae9f99f71.jpg) <br>
+![03repositories](https://user-images.githubusercontent.com/102632136/235779607-b8e4fea8-f76e-4749-8150-273e8e4197f7.jpg)
+![04routes](https://user-images.githubusercontent.com/102632136/235779608-14f7928c-5bb1-47d5-ad9f-31424dd4b5ac.jpg) <br>
+![05services](https://user-images.githubusercontent.com/102632136/235779610-afa916e1-346c-4d4f-9736-c3010e95e38e.jpg)
+![06shared](https://user-images.githubusercontent.com/102632136/235779611-d1e550ae-fb69-4379-b38a-fa7c9d3a42f4.jpg)
+![07validators](https://user-images.githubusercontent.com/102632136/235779613-e4d9c169-6046-4c19-acce-599430126568.jpg)
 
 <h2> Habilidades e Tecnologias trabalhadas neste projeto </h2>
-<br>
 |✅ HTML <br>     	                    
 |✅ Typescript <br>
 |✅ ReactJs <br>
