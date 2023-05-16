@@ -10,7 +10,7 @@ Aplicação React com as seguintes orientações: <br>
 Entrega: <br>
 - Repositório no Github para o back-end; <br>
 - Repositório no Github para o front-end; </h4>
-<h5> Por Michele Ladanivski, Maio/2023 </h5>
+<h5> Por Michele Ladanivski (@micheleldsk), Maio/2023 </h5>
 
 ![00](https://user-images.githubusercontent.com/102632136/235779595-636edd4c-fe94-456b-b1ba-92ed925f9557.jpg) <br>
 ![01controlers](https://user-images.githubusercontent.com/102632136/235779601-d94ca75c-ad8a-4c16-ae70-9bfd2cdd0f4c.jpg)
